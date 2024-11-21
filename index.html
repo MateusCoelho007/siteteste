@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastRescisão - Cálculo de Rescisão Trabalhista</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo FastRescisão" class="logo">
+        </div>
+        <h1>FastRescisão</h1>
+        <p>Preencha os dados abaixo para calcular sua rescisão.</p>
+    </header>
+    <main>
+        <!-- Seção 1: Informações Pessoais -->
+        <section>
+            <h2>Informações Pessoais</h2>
+            <form id="personal-info">
+                <label for="nome">Nome do Trabalhador:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+                
+                <label for="admissao">Data de Admissão:</label>
+                <input type="date" id="admissao" name="admissao" required>
+                
+                <label for="demissao">Data de Demissão:</label>
+                <input type="date" id="demissao" name="demissao" required>
+                
+                <label for="motivo">Motivo da Rescisão:</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="pedido_demissao">Pedido de Demissão</option>
+                    <option value="sem_justa_causa">Dispensa sem Justa Causa</option>
+                    <option value="justa_causa">Dispensa por Justa Causa</option>
+                    <option value="acordo_partes">Acordo entre as Partes</option>
+                </select>
+
+                <label for="dias-trabalhados">Dias Trabalhados no Mês:</label>
+                <input type="number" id="dias-trabalhados" name="dias-trabalhados" required>
+            </form>
+        </section>
+
+<section>
+    <h2>Parâmetros Financeiros</h2>
+    <form id="financial-info">
+        <label for="salario-base">Salário Base (R$):</label>
+        <input type="number" id="salario-base" name="salario-base" required>
+
+        <label for="comissoes">Média de Comissões e Gorjetas (R$):</label>
+        <input type="number" id="comissoes" name="comissoes">
+
+        <label for="adicional-noturno">Valor do Adicional Noturno (R$):</label>
+        <input type="number" id="adicional-noturno" name="adicional-noturno">
+
+        <label for="horas-extras">Média de Horas Extras (R$):</label>
+        <input type="number" id="horas-extras" name="horas-extras">
+
+        <label for="adicionais">Outros Adicionais (R$):</label>
+        <input type="number" id="adicionais" name="adicionais">
+
+        <label for="ferias-vencidas">Possui Férias Vencidas?</label>
+        <select id="ferias-vencidas" name="ferias-vencidas" required>
+            <option value="nao">Não</option>
+            <option value="sim">Sim</option>
+        </select>
+    </form>
+</section>
+<section>
+    <h2>Benefícios</h2>
+    <form id="benefits-info">
+        <label for="vale-transporte">Recebe Vale Transporte?</label>
+        <select id="vale-transporte" name="vale-transporte" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+
+        <label for="vale-refeicao">Recebe Vale Refeição/Alimentação?</label>
+        <select id="vale-refeicao" name="vale-refeicao" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+    </form>
+</section>
+<!-- Somatório dos valores -->
+<section id="somatorio">
+    <h2>Resumo Final</h2>
+    <div id="valor-bruto">
+        <strong>Valor Bruto: </strong> R$ <span id="valor-bruto-valor">0,00</span>
+    </div>
+    <div id="descontos">
+        <strong>Descontos: </strong> R$ <span id="valor-descontos">0,00</span>
+    </div>
+    <div id="rescisao-final">
+        <strong>Valor Final da Rescisão: </strong> R$ <span id="valor-rescisao-final">0,00</span>
+    </div>
+</section>
+
+        <!-- Botão para cálculo -->
+        <button id="calcular">Calcular Rescisão</button>
+
+        <!-- Área de resultados -->
+        <section id="resultado">
+            <h2>Resultado</h2>
+            <div id="resultado-texto">Os resultados do cálculo aparecerão aqui.</div>
+        </section>
+
+        <!-- Área do Documento Rescisório -->
+        <section id="documento-rescisao">
+            <h2>Documento Rescisório</h2>
+            <pre id="documento-texto"></pre>
+        </section>
+    </main>
+    <footer>
+	<!-- Botão de contato via WhatsApp -->
+		<a href="https://wa.me/5521996269290" target="_blank">
+  			  <button id="contato-whatsapp">Entrar em Contato</button>
+		</a>
+
+        <p>Desenvolvido para simplificar cálculos trabalhistas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

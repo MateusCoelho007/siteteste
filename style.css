@@ -1,0 +1,227 @@
+/* Reseta o estilo padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte global e cores de fundo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #00aaff, #004e92);
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Cabeçalho com fundo gradiente */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    border-bottom: 4px solid #003366;
+}
+
+/* Container da logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* Logo */
+.logo {
+    max-width: 150px; /* Ajuste conforme o tamanho da sua logo */
+    height: auto;
+    margin-bottom: 1em;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Estilo do formulário e campos de entrada */
+main {
+    padding: 2em;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+section {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 1.5em 0;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Campos de input e select */
+input, select {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1em;
+    background: #1d1f23;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #00aaff;
+    background: #292c33;
+    outline: none;
+}
+
+/* Botão de cálculo */
+button {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    background-color: #00aaff;
+    color: #fff;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #007bff;
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Estilo para o resultado */
+#resultado {
+    margin-top: 2em;
+    padding: 1.5em;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #00aaff;
+}
+
+#resultado-texto {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 3em;
+    padding: 1.5em;
+    background: #1d1f23;
+    color: #fff;
+    font-size: 1em;
+    border-top: 2px solid #003366;
+}
+
+footer p {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo para o somatório */
+#somatorio {
+    margin-top: 2em;
+    padding: 1.5em;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #00aaff;
+}
+
+#somatorio div {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#somatorio span {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Estilo para o botão de contato via WhatsApp */
+#contato-whatsapp {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #25D366;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+
+#contato-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+}
+
+#contato-whatsapp:focus {
+    outline: none;
+}
